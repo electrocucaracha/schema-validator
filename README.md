@@ -51,7 +51,7 @@ Similarly, method can also be used to validate plain JS objects:
 ```javascript
 // validate an object
 let person = { name: { first: 'Tom', last: 'Xoman' }, age: 45 }
-vaidateSchema(person, {
+validateSchema(person, {
   schemaPath: '/path/to/schema.yml' // can also be schema.json
 })
 
@@ -72,7 +72,7 @@ If you don't have a schema object built, but you just want to compare if structu
 ```javascript
 let person = { name: { first: 'Tom', last: 'Xoman' }, age: 'something' }
 let idealPerson = { name: { first: 'Tom', last: 'Xoman' }, age: 45 }
-vaidateSchema(person, {    // compares the structure of person object against
+validateSchema(person, {    // compares the structure of person object against
   schemaObj: idealPerson   // anotherPerson object.
 })
 ```
